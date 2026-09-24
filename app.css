@@ -25,11 +25,36 @@ display: inline-block;
     
 }
 
-#main-nav {
-
-animation-name: Animal dossier!
-:inherit-moz-range-thumb
+#main-nav a {
+    display: grid;
+    grid-template-columns: repeat (auto-fill, minmax (3oopx, 1fr)),
+    gap 20px;
 }
-:fullscreen
-:-moz-loading
-feDisplacementMap
+
+
+.card {
+    background-color: #fff;
+    border: solid 1px black;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.5rem 0.25rem rg (0,0,0,0.33);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    transition: all ease-in-out 300ms;
+    display: grid;
+    grid-template-rows: max-content auto 1fr;
+
+}
+
+&:hover {
+    box-shadow: 0.33rem 0.75rem 0.33rem 
+}
+
+& img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+& *:not (img, a.citation, sup) {
+    padding: 0 1rem;
+
+}
+
