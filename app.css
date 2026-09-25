@@ -1,60 +1,170 @@
-h1 {
-    background-color: blue;
+/* app.css - Mint Green Theme with Responsive Image Widths & Centered Cards */
+
+:root {
+    --mintgreen: #98FF98;
+    --dark-mint: #2e6940;
+    --bg-color: #f4fcf4;
+    --text-color: #2c3e50;
 }
 
-
-#main-nav {
-    background-color: white;
-}      
-
-
-
-#main-nav li{   
-display: inline-block;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-#main-nav a{
-    background-color: mediumspringgreen;    
-    padding: 1em;
-    padding: 1em;
-    display: inline-block;
-    color: black;   
+header {
+    background-color: var(--dark-mint);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header img {
+    max-width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--mintgreen);
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #1a252f;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
-    border: 1px solid black;
-    border-radius: 5px;
-    
+    padding: 1rem 1.25rem;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+    font-weight: 500;
 }
 
-#main-nav a {
-    display: grid;
-    grid-template-columns: repeat (auto-fill, minmax (3oopx, 1fr)),
-    gap 20px;
+nav a:hover {
+    background-color: var(--mintgreen);
+    color: #1a252f;
 }
 
-
-.card {
-    background-color: #fff;
-    border: solid 1px black;
-    border-radius: 1rem;
-    box-shadow: 0.25rem 0.5rem 0.25rem rg (0,0,0,0.33);
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    transition: all ease-in-out 300ms;
-    display: grid;
-    grid-template-rows: max-content auto 1fr;
-
-}
-
-&:hover {
-    box-shadow: 0.33rem 0.75rem 0.33rem 
-}
-
-& img {
-    border-radius: 1rem 1rem 0 0;
-}
-
-& *:not (img, a.citation, sup) {
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
     padding: 0 1rem;
-
 }
 
+section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure all images inside main content & maps stay cleanly constrained and centered */
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Center and layout the featured species cards on the home page */
+main section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main section:nth-of-type(2) h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main section:nth-of-type(2) article {
+    background: #ffffff;
+    border: 2px solid var(--mintgreen);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+main section:nth-of-type(2) article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+main section:nth-of-type(2) article img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background-color: var(--mintgreen);
+    color: #1a252f;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background-color: #1a252f;
+    color: white;
+    margin-top: 3rem;
+}
+
+/* References section styling inside the footer */
+footer section#references {
+    background: white;
+    color: var(--text-color);
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+footer section#references h2 {
+    color: var(--dark-mint);
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+footer section#references ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
