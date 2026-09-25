@@ -1,4 +1,4 @@
-/* app.css - Mint Green Theme with Responsive Image Widths & Centered Cards */
+
 
 :root {
     --mintgreen: #98FF98;
@@ -8,13 +8,57 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Sans-Serif', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
+
+.animal-card {
+    position: relative;
+    
+    & h3 {
+        position: absolute;
+
+        z-index: 3;
+        left: 28%;
+        top: 25%;
+    }
+    color
+
+    & p {
+        position: absolute;
+        bottom: 1rem;
+    }
+}
+.animal-card:nth-child(3) h3 {
+    left: 15%;
+}
+.animal-card:nth-child(4) h3 {
+    left: 38%;
+}
+.animal-card:nth-child(5) h3 {
+    left: 20%;
+}
+
+.animal-card a{
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 2px 2px #000;
+    opacity: 0;
+}
+
+.animal-card:hover a {
+    opacity: 1;
+}
+
+
+
+
+
+
 
 header {
     background-color: var(--dark-mint);
@@ -74,7 +118,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Ensure all images inside main content & maps stay cleanly constrained and centered */
+
 main img {
     max-width: 100%;
     height: auto;
@@ -83,7 +127,7 @@ main img {
     margin: 1rem auto;
 }
 
-/* Center and layout the featured species cards on the home page */
+
 main section:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
@@ -146,7 +190,7 @@ footer {
     margin-top: 3rem;
 }
 
-/* References section styling inside the footer */
+
 footer section#references {
     background: white;
     color: var(--text-color);
